@@ -13,7 +13,7 @@ public class FirmaFichero {
         generadorClaves.crearClaves();
         try {
             byte[] datosFichero = Ficheros.sacaBytesDeFichero("pruebaImagenMD5.jpg");
-            //Creando el objeto firma
+            //Creando el objeto firma con el algoritmo
             Signature firma = Signature.getInstance("SHA1WithRSA");
             //Inicializar la firma con la clave privada de la pareja de clave publica-privada
             firma.initSign(generadorClaves.getClavePrivada());
